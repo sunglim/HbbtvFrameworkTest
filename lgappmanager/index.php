@@ -81,8 +81,8 @@ function runStep(name) {
       });
     } else if (name=='getAppInfoFail') {
       attrib = 'getAppInfoFail';
-      lgappmgr.getAppInfo("com.webos.app.discoveryaa", function(result) {
-        showStatus(true, "success to calL" + Result.errorText);
+      lgappmgr.getAppInfo("com.webos.app.memberships", function(result, errox) {
+        showStatus(false, "success to calL" + errox);
       });
     } else if (name=='getAppInfo') {
       attrib = 'getAppInfo';
