@@ -174,12 +174,12 @@ function govid(typ) {
 <div class="txtdiv txtlg" style="left: 110px; top: 60px; width: 500px; height: 30px;">MIT-xperts HBBTV tests</div>
 <div id="instr" class="txtdiv" style="left: 700px; top: 110px; width: 400px; height: 360px;"></div>
 <ul id="menu" class="menu" style="left: 100px; top: 100px;">
-  <li name="vidbroadcast">Test 1: start broadcast video</li>
+  <!--<li name="vidbroadcast">Test 1: start broadcast video</li>
   <li name="lright">Test 2: lower right</li>
   <li name="lcenter">Test 3: lower center</li>
   <li name="full">Test 4: fullscreen (background)</li>
   <li name="vidclip">Test 5: video clipping test</li>
-  <li name="vidstop">Test 6: stop video</li>
+  <li name="vidstop">Test 6: stop video</li>-->
   <li name="vidstream">Test 7: start streaming video</li>
   <li name="lright">Test 8: lower right</li>
   <li name="togglefs">Test 9: toggle fullscreen mode</li>

@@ -45,7 +45,7 @@ function runStep(name) {
   try {
     if (name=='launch') {
       attrib = 'launch';
-      lgappmgr.launch("youtube.leanback.v4", function(success, errorCode, errorText) {
+      lgappmgr.launch("com.webos.app.discovery", function(success, errorCode, errorText) {
         if (success) {
           showStatus(true, "Success to launch errorCode : " + errorCode + " errorText : " + errorText);
         } else {
@@ -63,7 +63,7 @@ function runStep(name) {
       });
     } else if (name=='deeplaunch') {
       attrib = 'deeplaunch';
-      lgappmgr.launch("com.webos.app.discovery", "category/GAME_APPS/com.webos.app.example", function(success, errorCode, errorText) {
+      lgappmgr.launch("com.webos.app.discovery", "category/APPSGAMES/com.limsungguk.app.qahbbtvtest", function(success, errorCode, errorText) {
         if (success) {
           showStatus(true, "success to launch");
         } else {
@@ -89,6 +89,16 @@ function runStep(name) {
       lgappmgr.getAppInfo("com.webos.app.discovery", function(result) {
         showStatus(true, "success to launch");
       });
+    } else if (name=='serviceId') {
+      var lgconfig = document.getElementById('lgobj').configuration;
+      if (lgconfig)
+        showStatus(true, "serviceId : " + lgconfig.serviceCountryId);
+      else 
+        showStatus(false, "no configuration object" );
+    } else if (name=='broadcastId') {
+      var lgconfig = document.getElementById('lgobj').configuration;
+      if (lgconfig)
+        showStatus(true, "broadcastId: " + lgconfig.broadcastCountryId);
     } else {
       showStatus(false, 'Unknown test name '+name);
       return;
@@ -136,6 +146,8 @@ function validateLanguageList(txt) {
   <li name="deeplaunchfail">Deep Launch - wrong link</li>
   <li name="getAppInfo">getAppInfo</li>
   <li name="getAppInfoFail">getAppInfo - wrong id</li>
+  <li name="serviceId">Get configuration.serviceCountryId</li>
+  <li name="broadcastId">get configuration.broadcastCountryId</li>
   <li name="exit">Return to test menu</li>
 </ul>
 <div id="status" style="left: 700px; top: 300px; width: 400px; height: 400px;"></div>
