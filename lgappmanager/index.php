@@ -35,6 +35,7 @@ function runStep(name) {
   setInstr('Executing step...');
   showStatus(true, '');
   var lgappmgr = document.getElementById('lgobj').applicationManager;
+  var lgappmgr2 = document.getElementById('lgobj2').applicationManager;
   if (!lgappmgr) {
     showStatus(false, 'Cannot find application/LgApplicationManager');
     return;
@@ -58,6 +59,7 @@ function runStep(name) {
         if (success) {
           showStatus(true, "Success to launch errorCode : " + errorCode + " errorText : " + errorText);
         } else {
+          nike = nike + "1";
           showStatus(false, "Fail to launch errorCode : " + errorCode + " errorText : " + errorText);
         }
       });
@@ -77,6 +79,29 @@ function runStep(name) {
           showStatus(true, "success to launch");
         } else {
           showStatus(false, "Fail to launch errorCode : " + errorCode + " errorText : " + errorText);
+        }
+      });
+    } else if (name=='twolaunch') {
+      attrib = 'twolaunch';
+      var output = "Launch ";
+      lgappmgr.launch("com.webos.app.discoverywrong", function(success, errorCode, errorText) {
+        if (success) {
+          showStatus(true, "Success to launch errorCode : " + errorCode + " errorText : " + errorText);
+        } else {
+          output = output + "1";
+          showStatus(false, "Fail to launch errorCode : " + errorCode + " errorText : " + errorText);
+        }
+      });
+      lgappmgr2.launch("com.webos.app.discoverywrong", function(success, errorCode, errorText) {
+        if (success) {
+          showStatus(true, "Success to launch errorCode : " + errorCode + " errorText : " + errorText);
+        } else {
+          output = output + "2";
+          if (output == "Launch 12") {
+            showStatus(true, "value " + output);
+          } else {
+            showStatus(false, "FAIL with value " + output);
+          }
         }
       });
     } else if (name=='getAppInfoFail') {
@@ -136,6 +161,7 @@ function validateLanguageList(txt) {
 <?php echo appmgrObject(); ?>
 
 <object id="lgobj" type="application/vnd.lge.hbbtv"></object>
+<object id="lgobj2" type="application/vnd.lge.hbbtv"></object>
 
 <div class="txtdiv txtlg" style="left: 110px; top: 60px; width: 500px; height: 30px;">MIT-xperts HBBTV tests</div>
 <div id="instr" class="txtdiv" style="left: 700px; top: 110px; width: 400px; height: 360px;"></div>
@@ -146,6 +172,7 @@ function validateLanguageList(txt) {
   <li name="deeplaunchfail">Deep Launch - wrong link</li>
   <li name="getAppInfo">getAppInfo</li>
   <li name="getAppInfoFail">getAppInfo - wrong id</li>
+  <li name="twolaunch">two object launch twice</li>
   <li name="serviceId">Get configuration.serviceCountryId</li>
   <li name="broadcastId">get configuration.broadcastCountryId</li>
   <li name="exit">Return to test menu</li>

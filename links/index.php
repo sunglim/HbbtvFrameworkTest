@@ -57,6 +57,8 @@ function runStep(name) {
     document.location.href = 'http://hbbtv.francetv.fr/applications/meteo/front/index.xhtml';
   } else if (name=='france2') {
     document.location.href = 'http://hbbtv.francetv.fr/applications/epg/front/hbbtv.xhtml';
+  } else if (name=='ifa') {
+    document.location.href = 'http://arthur.celeonet.fr/ftven/ifa2014/hub/';
   } else if (name=='denmark') {
     document.location.href = 'http://dr.hbb.fokuson.tv/client-portal/hbbtv/drnu/?apptype=lg';
   }
@@ -102,6 +104,7 @@ This test suite is for HbbTV terminal developers to test their implementation of
   <li name="france1">France television meteo</li>
   <li name="france2">France television programmes tv</li>
   <li name="denmark">Denmark DR TBD</li>
+  <li name="ifa">ifa demo</li>
   <li name="exit">Return to test menu</li>
 </ul>
 
