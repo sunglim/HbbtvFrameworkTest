@@ -13,11 +13,10 @@ function sendContentType() {
 }
 
 function videoObject($left=0, $top=0, $width=1280, $height=720) {
-  if ($_REQUEST['demo']) {
-    global $ROOTDIR;
-    return '<img id="video" style="position: absolute; left: '.$left.'px; top: '.$top.'px; width: '.$width.'px; height: '.$height.'px;" src="'.$ROOTDIR.'/video.jpg" />';
-  }
-  return '<object id="video" type="video/broadcast" style="position: absolute; left: '.$left.'px; top: '.$top.'px; width: '.$width.'px; height: '.$height.'px;"></object>';
+  // Always return <img> tag instead of <object type="video/broadcast">
+  // Because HbbTV App Framework doesn't support broadcast related element.
+  global $ROOTDIR;
+  return '<img id="video" style="position: absolute; left: '.$left.'px; top: '.$top.'px; width: '.$width.'px; height: '.$height.'px;" src="'.$ROOTDIR.'/video.jpg" />';
 }
 function appmgrObject() {
   if ($_REQUEST['demo']) return '';
