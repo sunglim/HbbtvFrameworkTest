@@ -185,7 +185,7 @@ function govid(typ) {
   <li name="togglefs">Test 9: toggle fullscreen mode</li>
   <li name="lcenter">Test 10: lower center</li>
   <li name="full">Test 11: fullscreen (background)</li>
-  <li name="vidbroadcast">Test 12: start broadcast video</li>
+<!--  <li name="vidbroadcast">Test 12: start broadcast video</li>-->
   <li name="exit">Return to test menu</li>
 </ul>
 <div id="status" style="left: 700px; top: 480px; width: 400px; height: 200px;"></div>
