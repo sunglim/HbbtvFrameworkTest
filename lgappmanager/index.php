@@ -166,8 +166,8 @@ function validateLanguageList(txt) {
 <div class="txtdiv txtlg" style="left: 110px; top: 60px; width: 500px; height: 30px;">MIT-xperts HBBTV tests</div>
 <div id="instr" class="txtdiv" style="left: 700px; top: 110px; width: 400px; height: 360px;"></div>
 <ul id="menu" class="menu" style="left: 100px; top: 100px;">
-  <li name="launch">Launch</li>
-  <li name="launchfail">Launch - wrong link</li>
+  <!--<li name="launch">Launch</li>
+  <li name="launchfail">Launch - wrong link</li>-->
   <li name="deeplaunch">Deep Launch</li>
   <li name="deeplaunchfail">Deep Launch - wrong link</li>
   <li name="getAppInfo">getAppInfo</li>

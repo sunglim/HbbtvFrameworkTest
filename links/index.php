@@ -63,6 +63,8 @@ function runStep(name) {
     document.location.href = 'http://arthur.celeonet.fr/ftven/ifa2014/hub/';
   } else if (name=='denmark') {
     document.location.href = 'http://dr.hbb.fokuson.tv/client-portal/hbbtv/drnu/?apptype=lg';
+  } else if (name=='tenplay') {
+    document.location.href = 'http://tv.tenplay.com.au/';
   }
 }
 
@@ -92,6 +94,7 @@ In case you think a test may need a fix, please contact us (or submit a fix your
 This test suite is for HbbTV terminal developers to test their implementation of the HbbTV 1.1.1 standard. Although this test suite contains a lot of test, it is not complete. It contains the most important interoperability issues disvocered in current applications. Tested parts are not covered by 100%, but the most importent checks are performed.<br /><br />More information about missing and untested parts can be found at<br />https://github.com/mitxp/HbbTV-Testsuite/wiki/TODOs</div>
 
 <ul id="menu" class="menu" style="left: 100px; top: 100px;">
+  <li name="tenplay">TenPlay_dot_com</li>
   <li name="hdplustest">HD Plus Test</li>
   <li name="czech">Czech</li>
   <li name="ard1">Ard RnD</li>
