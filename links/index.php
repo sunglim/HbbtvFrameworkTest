@@ -65,6 +65,8 @@ function runStep(name) {
     document.location.href = 'http://dr.hbb.fokuson.tv/client-portal/hbbtv/drnu/?apptype=lg';
   } else if (name=='tenplay') {
     document.location.href = 'http://tv.tenplay.com.au/';
+  } else if (name=='emptyset') {
+    document.location.href = './empty.html';
   }
 }
 
@@ -73,7 +75,8 @@ function runStep(name) {
 
 </head><body>
 
-<div style="left: 0px; top: 0px; width: 1280px; height: 720px; background-color: #132d48;" />
+<!--<div style="left: 0px; top: 0px; width: 1280px; height: 720px; background-color: #132d48;" />-->
+<div style="left: 0px; top: 0px; width: 1280px; height: 720px;" />
 
 <?php echo appmgrObject(); ?>
 
@@ -111,6 +114,7 @@ This test suite is for HbbTV terminal developers to test their implementation of
   <li name="france2">France television programmes tv</li>
   <li name="denmark">Denmark DR TBD</li>
   <li name="ifa">ifa demo</li>
+  <li name="emptyset">empty</li>
   <li name="exit">Return to test menu</li>
 </ul>
 
